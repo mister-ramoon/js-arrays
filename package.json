@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "date-fns": "^2.30.0",
     "http-server": "^14.1.1",
     "prettier": "^2.8.8"
   }

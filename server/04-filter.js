@@ -20,8 +20,7 @@ const orders = [
         total: 240,
         delivered: true
     },
-]
-
+];
 
 const rta = words.filter(word => word.length > 6);
 
