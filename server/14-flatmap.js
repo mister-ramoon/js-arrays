@@ -39,3 +39,18 @@ const calendars = {
 
 const starDateArray = Object.values(calendars).flatMap(calendar => calendar.map(event => event.startDate));
 console.log('starDateArray', starDateArray);
+
+const zenPython = [
+    "Beautiful is better than ugly",
+    "Explicit is better than implicit",
+    "Simple is better than complex",
+    "Complex is better than complicated",
+]
+
+const countWords  = (phraseArray) => {
+    const numberOfWords = phraseArray.flatMap(phrase => phrase.split(' ')).length;
+    return numberOfWords;
+}
+
+console.log('countWords', countWords(zenPython));
+
