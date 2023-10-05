@@ -38,3 +38,34 @@ products2[productIndex2] = {
 };
 
 console.log('products2', products2);
+
+// Inmutable way
+const products2 = [
+    {title: 'Pizza', price: 12, id: '🍕'},
+    {title: 'Burger', price: 23, id: '🍔'},
+    {title: 'Hot dog', price: 34, id: '🌭'}
+];
+
+const productsFiltered = products2.filter(item => item.id !== '🍔');
+
+const update2 = {
+    id: '🌭',
+    changes: {
+        price: 100,
+        description: 'Delicious hot dog'
+    }
+};
+
+const productIndexUpdated = products2.findIndex(item => item.id === update2.id);
+
+const productsUpdated = [...products2];
+
+productsUpdated[productIndexUpdated] = {
+    ...productsUpdated[productIndexUpdated],
+    ...update2.changes
+}
+
+console.log('products2', products2);
+console.log('productsFiltered', productsFiltered);
+console.log('productsUpdated', productsUpdated);
+
