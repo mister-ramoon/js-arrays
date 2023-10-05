@@ -6,22 +6,26 @@ const orders = [
     {
         customerNasme: 'Nicolas',
         total: 60,
-        delivered: true
+        delivered: true,
+        date: new Date(2021, 1, 1, 15)
     },
     {
         customerNasme: 'Zulema',
         total: 120,
-        delivered: false
+        delivered: false,
+        date: new Date(2021, 1, 1, 10)
     },
     {
         customerNasme: 'Santiago',
         total: 180,
-        delivered: true
+        delivered: true,
+        date: new Date(2021, 1, 1, 12)
     },
     {
         customerNasme: 'Valentina',
         total: 240,
-        delivered: true
+        delivered: true,
+        date: new Date(2021, 1, 1, 9)
     }
 ];
 
@@ -37,3 +41,6 @@ console.log(words.sort( (a,b) => a.localeCompare(b) ));
 
 // Sort orders
 console.log(orders.sort( (a,b) => a.total - b.total ));
+
+// Sort orders by date
+console.log(orders.sort( (a,b) => a.date - b.date ));
